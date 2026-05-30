@@ -297,6 +297,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 7. Project Details Modal Logic ---
     const projectDetails = {
+        graschavez: {
+            title: "Gras Chavez - Cancha de Fútbol",
+            tag: "Páginas Web",
+            desc: "Landing page deportiva diseñada para el alquiler de canchas de grass sintético en Huanta. Incluye sistema de reservas por WhatsApp, visualización de horarios disponibles, precios por turno, galería de instalaciones y sección de campeonatos semanales para atraer y fidelizar clientes.",
+            img: "gras-chavez.png",
+            specs: [
+                "Diseño oscuro de alto impacto con identidad deportiva y moderna",
+                "Botón de reserva directa integrado con WhatsApp",
+                "Sección de precios y horarios disponibles por turno",
+                "Galería visual de instalaciones y cancha profesional",
+                "Estadísticas: +500 partidos jugados, atención 24/7, campeonatos semanales",
+                "Diseño 100% responsive para móviles y escritorio"
+            ],
+            wa: "https://wa.me/51900000000?text=Hola%20WebSis,%20vi%20el%20proyecto%20de%20Gras%20Chavez%20y%20me%20gustar%C3%ADa%20una%20web%20similar%20para%20mi%20negocio."
+        },
         auradent: {
             title: "Aura Dent - Clínica Dental",
             tag: "Páginas Web",
