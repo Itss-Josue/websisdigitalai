@@ -581,3 +581,198 @@ if (canvas) {
         });
     }
 });
+// ══════════════════════════════════════════════════════
+// CHATBOT WIDGET — WebSis Digital Ai  (IA con Claude)
+// ══════════════════════════════════════════════════════
+(function () {
+
+    /* ── Prompt del sistema ── */
+    const SYSTEM_PROMPT = `Eres Asis, el asistente virtual de WebSis Digital Ai, una agencia peruana de desarrollo web y sistemas digitales. Hablas como una persona real: natural, cálida, directa y profesional. Nunca suenas robótico ni usas frases genéricas.
+
+SOBRE LA EMPRESA:
+WebSis Digital Ai es una agencia peruana especializada en páginas web, sistemas empresariales y marketing digital. Trabajamos con negocios de todo tamaño que quieren crecer en el mundo digital. Nuestro diferencial es que combinamos diseño premium con tecnología de inteligencia artificial, y entregamos proyectos rápido sin sacrificar calidad.
+
+SERVICIOS Y PRECIOS:
+1. Flyer digital / diseño gráfico — desde S/. 20
+2. Landing page (página de una sola pantalla para captar clientes) — desde S/. 200
+3. Página web completa (corporativa, con varias secciones) — desde S/. 350
+4. Tienda virtual / E-commerce — desde S/. 600
+5. Sistema empresarial a medida (ERP, CRM, inventario, facturación, etc.) — desde S/. 1,500
+6. Marketing digital (manejo de redes, SEO, publicidad pagada) — desde S/. 200 al mes
+7. Mantenimiento web mensual — desde S/. 80 al mes
+
+TIEMPOS DE ENTREGA:
+- Flyer: 1 a 2 días
+- Landing page: 3 a 5 días hábiles
+- Página web completa: 7 a 14 días hábiles
+- Tienda virtual: 14 a 21 días hábiles
+- Sistemas empresariales: 30 a 90 días según complejidad
+
+CÓMO COTIZAR:
+Cuando el cliente quiera cotizar, hazle estas preguntas una por una (no todas juntas) para entender bien su proyecto:
+- ¿Qué tipo de negocio tienes?
+- ¿Qué necesitas exactamente: una página web, un sistema, marketing?
+- ¿Tienes algún logo o colores definidos?
+- ¿Tienes fecha límite para tenerlo listo?
+Con esos datos, dale una estimación de precio y dile que puede confirmar la cotización exacta por WhatsApp: +51 900 000 000
+
+CONTACTO:
+- WhatsApp: +51 900 000 000
+- Email: contacto@websisdigital.ai
+
+REGLAS DE CONVERSACIÓN:
+- Habla siempre en español peruano, de forma natural y cercana. Puedes usar "te" y "tu".
+- Si el cliente saluda, salúdalo de vuelta con calidez y pregunta en qué le puedes ayudar.
+- Si pregunta por precios, dáselos directamente con confianza, mencionando que son precios desde (mínimos) y que el precio final depende de los detalles del proyecto.
+- Si pregunta por servicios, explícalos brevemente y con entusiasmo, resaltando el valor que dan.
+- Si el cliente quiere cotizar, guíalo con las preguntas de cotización de forma conversacional.
+- Máximo 4 oraciones por respuesta. Si hay mucha info, divídela en partes y ofrece ampliar.
+- NUNCA uses asteriscos, markdown, viñetas con guión ni formato especial. Solo texto natural.
+- Si no sabes algo, dilo con honestidad y ofrece derivarlo al WhatsApp.
+- Siempre termina animando al cliente a dar el siguiente paso (cotizar, escribir al WA, ver el portafolio).`;
+
+
+    const WA_NUMBER = '51900000000';
+    const WA_MSG    = 'Hola WebSis Digital Ai, quiero información sobre sus servicios.';
+
+    /* ── Estado ── */
+    const history = [];
+    let isLoading = false;
+
+    /* ── DOM refs ── */
+    const bubble   = document.getElementById('ws-bubble');
+    const panel    = document.getElementById('ws-panel');
+    const closeBtn = document.getElementById('ws-close');
+    const msgBox   = document.getElementById('ws-messages');
+    const input    = document.getElementById('ws-input');
+    const sendBtn  = document.getElementById('ws-send');
+    const qrBtns   = document.querySelectorAll('.ws-qr');
+    const waBanner = document.getElementById('ws-wa-banner');
+    const badge    = document.getElementById('ws-badge');
+
+    if (!bubble) return; // widget no presente
+
+    /* ── Toggle ── */
+    bubble.addEventListener('click', () => {
+        panel.classList.toggle('open');
+        badge.style.display = 'none';
+        if (panel.classList.contains('open') && msgBox.children.length === 0) {
+            showWelcome();
+        }
+    });
+    closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+
+    /* ── WhatsApp ── */
+    waBanner.addEventListener('click', () => {
+        window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MSG)}`, '_blank');
+    });
+
+    /* ── Bienvenida ── */
+    function showWelcome() {
+        setTimeout(() => appendBot('¡Hola! 👋 ¿Cómo estás? Soy Asis, de WebSis Digital Ai.'), 200);
+        setTimeout(() => appendBot('Estoy aquí para ayudarte con lo que necesites: precios, servicios, cotizaciones, tiempos de entrega... lo que sea. ¿En qué te puedo ayudar hoy?'), 900);
+    }
+
+    /* ── Helpers ── */
+    function getTime() {
+        return new Date().toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function escHtml(str) {
+        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+                  .replace(/"/g,'&quot;').replace(/\n/g,'<br>');
+    }
+
+    function appendBot(text) {
+        const w = document.createElement('div');
+        w.className = 'ws-msg bot';
+        w.innerHTML = `<div class="ws-bubble-text">${escHtml(text)}</div><span class="ws-time">${getTime()}</span>`;
+        msgBox.appendChild(w);
+        scrollBottom();
+    }
+
+    function appendUser(text) {
+        const w = document.createElement('div');
+        w.className = 'ws-msg user';
+        w.innerHTML = `<div class="ws-bubble-text">${escHtml(text)}</div><span class="ws-time">${getTime()}</span>`;
+        msgBox.appendChild(w);
+        scrollBottom();
+    }
+
+    function showTyping() {
+        const w = document.createElement('div');
+        w.className = 'ws-msg bot'; w.id = 'ws-typing-node';
+        w.innerHTML = `<div class="ws-typing-wrap"><span></span><span></span><span></span></div>`;
+        msgBox.appendChild(w);
+        scrollBottom();
+    }
+
+    function removeTyping() {
+        const t = document.getElementById('ws-typing-node');
+        if (t) t.remove();
+    }
+
+    function scrollBottom() { msgBox.scrollTop = msgBox.scrollHeight; }
+
+    function setLoading(v) {
+        isLoading = v;
+        sendBtn.disabled = v;
+        input.disabled   = v;
+    }
+
+    /* ── Enviar mensaje ── */
+    async function sendMessage(text) {
+        text = text.trim();
+        if (!text || isLoading) return;
+
+        appendUser(text);
+        input.value = '';
+        input.style.height = 'auto';
+        history.push({ role: 'user', content: text });
+        setLoading(true);
+        showTyping();
+
+        try {
+            const res = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ messages: history })
+            });
+
+            const data = await res.json();
+            removeTyping();
+
+            if (data.reply) {
+                history.push({ role: 'assistant', content: data.reply });
+                appendBot(data.reply);
+            } else {
+                appendBot('Disculpa el inconveniente. Para atenderte mejor, escríbenos al WhatsApp +51 900 000 000. ¡Con gusto te ayudamos!');
+            }
+        } catch (err) {
+            removeTyping();
+            appendBot('Parece que hay un problema de conexión. Puedes escribirnos directamente al WhatsApp +51 900 000 000.');
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    /* ── Eventos ── */
+    sendBtn.addEventListener('click', () => sendMessage(input.value));
+
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage(input.value);
+        }
+    });
+
+    input.addEventListener('input', () => {
+        input.style.height = 'auto';
+        input.style.height = Math.min(input.scrollHeight, 100) + 'px';
+    });
+
+    qrBtns.forEach(btn => {
+        btn.addEventListener('click', () => sendMessage(btn.dataset.msg));
+    });
+
+})();
