@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSis Digital Ai | Agencia de Desarrollo Web y Sistemas Corporativos</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Desarrollamos soluciones digitales a medida: Páginas Web corporativas, Sistemas ERP/CRM, Marketing de conversión y Branding Digital. Impulsa tu negocio hoy con WebSis.">
+    <meta name="keywords" content="paginas web premium, desarrollo de sistemas, erp a medida, crm peru, marketing digital agencia, diseño de flyers, websis digital ai">
+    <meta name="author" content="WebSis Digital Ai">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WebSis Digital Ai | Soluciones Digitales Corporativas">
+    <meta property="og:description" content="Diseño web de alto rendimiento, sistemas empresariales escalables y estrategias digitales de conversión.">
+    <meta property="og:url" content="https://websisdigital.ai">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Ambient Ambient Particle Rain Canvas (Subtle digital rain) -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#inicio" class="logo-container" id="logo-link">
+                <!-- SVG Logo matching the image: Stylized W, Ai, and WebSis text -->
+                <svg class="logo-svg" viewBox="0 0 160 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 10L25 35L33 17L41 35L51 10" stroke="url(#paint0_linear_logo)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="48" cy="12" r="3" fill="#ec4899" class="logo-ai-dot"/>
+                    <path d="M43 12C45 9 52 9 54 13" stroke="#a855f7" stroke-width="2" stroke-linecap="round" class="logo-ai-curve"/>
+                    <text x="60" y="28" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" fill="var(--color-logo-text)" class="logo-text-websis">WebSis</text>
+                    <text x="60" y="42" font-family="'Outfit', sans-serif" font-weight="500" font-size="10" fill="#a855f7" letter-spacing="1">DIGITAL AI</text>
+                    
+                    <defs>
+                        <linearGradient id="paint0_linear_logo" x1="15" y1="10" x2="51" y2="35" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2563eb"/>
+                            <stop offset="0.5" stop-color="#7c3aed"/>
+                            <stop offset="1" stop-color="#db2777"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+                    <li><a href="#presupuesto" class="nav-link">Cotizador</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#faq" class="nav-link">Preguntas</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <a href="https://wa.me/51900000000?text=Hola%20WebSis%20Digital%20Ai,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" class="btn-primary btn-header" id="btn-header-contact">
+                    Hablemos
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Corporate Visual) -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">TECNOLOGÍA AI & DESARROLLO PREMIUM</span>
+                <h1 class="hero-title">
+                    ¿Tu negocio aún no tiene <span class="highlight-gradient">página web?</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Estás <span class="highlight-danger">perdiendo clientes</span> y posicionamiento frente a tu competencia.
+                </p>
+                
+                <div class="hero-box">
+                    <div class="hero-box-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <p class="hero-box-text">
+                        Diseñamos y desarrollamos plataformas web <span class="highlight-violet">modernas, ultrarrápidas</span> y listas para multiplicar tus ventas.
+                    </p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn-primary icon-btn" id="btn-hero-projects">
+                        Explorar portafolio 
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Visual: Dashboard principal + mockups flotantes -->
+            <div class="hero-visual">
+
+                <!-- ── Laptop principal: Dashboard ERP ── -->
+                <div class="laptop-mockup-wrap">
+                    <div class="laptop-mockup">
+                        <div class="laptop-screen">
+                            <div class="screen-content">
+                                <!-- Barra del navegador -->
+                                <div class="sim-header">
+                                    <div class="sim-dots"><span></span><span></span><span></span></div>
+                                    <div class="sim-title">app.websisdigital.ai/dashboard</div>
+                                    <span class="sim-category-badge">SISTEMA ERP</span>
+                                </div>
+
+                                <!-- Dashboard interior (puro SVG + HTML, sin foto) -->
+                                <div class="dash-body">
+
+                                    <!-- Sidebar -->
+                                    <div class="dash-sidebar">
+                                        <div class="dash-logo-mini">W<span>S</span></div>
+                                        <div class="dash-nav-icons">
+                                            <div class="dash-nav-icon active">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                                            </div>
+                                            <div class="dash-nav-icon">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                            </div>
+                                            <div class="dash-nav-icon">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                            </div>
+                                            <div class="dash-nav-icon">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                            </div>
+                                            <div class="dash-nav-icon">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Main content -->
+                                    <div class="dash-main">
+
+                                        <!-- Top bar -->
+                                        <div class="dash-topbar">
+                                            <div class="dash-topbar-left">
+                                                <span class="dash-greeting">Panel de Control</span>
+                                                <span class="dash-date">Mayo 2026</span>
+                                            </div>
+                                            <div class="dash-topbar-right">
+                                                <div class="dash-user-chip">
+                                                    <div class="dash-avatar-m">
+                                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                                                    </div>
+                                                    <span>Carlos R.</span>
+                                                </div>
+                                                <div class="dash-notif">
+                                                    <div class="dash-notif-dot"></div>
+                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- KPI cards row -->
+                                        <div class="dash-kpi-row">
+                                            <div class="dash-kpi-card kpi-blue">
+                                                <span class="kpi-lbl">Ventas Hoy</span>
+                                                <span class="kpi-val">S/. 8,342</span>
+                                                <span class="kpi-trend up">▲ 23%</span>
+                                            </div>
+                                            <div class="dash-kpi-card kpi-purple">
+                                                <span class="kpi-lbl">Pedidos</span>
+                                                <span class="kpi-val">147</span>
+                                                <span class="kpi-trend up">▲ 11%</span>
+                                            </div>
+                                            <div class="dash-kpi-card kpi-pink">
+                                                <span class="kpi-lbl">Clientes</span>
+                                                <span class="kpi-val">2,891</span>
+                                                <span class="kpi-trend up">▲ 8%</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Chart + Pie row -->
+                                        <div class="dash-charts-row">
+                                            <!-- Área de línea -->
+                                            <div class="dash-chart-box dash-line-chart">
+                                                <div class="chart-box-header">
+                                                    <span>Ingresos Mensuales</span>
+                                                    <span class="chart-badge">2026</span>
+                                                </div>
+                                                <svg viewBox="0 0 200 70" class="line-chart-svg">
+                                                    <defs>
+                                                        <linearGradient id="lgrad" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.5"/>
+                                                            <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+                                                        </linearGradient>
+                                                        <linearGradient id="lgrad2" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="0%" stop-color="#2563eb" stop-opacity="0.3"/>
+                                                            <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <!-- Grid lines -->
+                                                    <line x1="0" y1="15" x2="200" y2="15" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                                                    <line x1="0" y1="35" x2="200" y2="35" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                                                    <line x1="0" y1="55" x2="200" y2="55" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+                                                    <!-- Area fill línea 1 -->
+                                                    <path d="M0,55 L25,45 L50,38 L75,30 L100,22 L125,18 L150,12 L175,8 L200,5 L200,70 L0,70 Z" fill="url(#lgrad)"/>
+                                                    <!-- Línea principal -->
+                                                    <path d="M0,55 L25,45 L50,38 L75,30 L100,22 L125,18 L150,12 L175,8 L200,5" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <!-- Puntos -->
+                                                    <circle cx="0"   cy="55" r="2.5" fill="#7c3aed"/>
+                                                    <circle cx="50"  cy="38" r="2.5" fill="#7c3aed"/>
+                                                    <circle cx="100" cy="22" r="2.5" fill="#7c3aed"/>
+                                                    <circle cx="150" cy="12" r="2.5" fill="#7c3aed"/>
+                                                    <circle cx="200" cy="5"  r="2.5" fill="#7c3aed"/>
+                                                    <!-- Línea secundaria -->
+                                                    <path d="M0,65 L25,58 L50,52 L75,48 L100,42 L125,40 L150,35 L175,30 L200,28" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,2" stroke-linecap="round"/>
+                                                    <!-- Etiquetas eje X -->
+                                                    <text x="0"   y="70" fill="#475569" font-size="5">Ene</text>
+                                                    <text x="47"  y="70" fill="#475569" font-size="5">Feb</text>
+                                                    <text x="97"  y="70" fill="#475569" font-size="5">Mar</text>
+                                                    <text x="147" y="70" fill="#475569" font-size="5">Abr</text>
+                                                    <text x="193" y="70" fill="#475569" font-size="5">May</text>
+                                                </svg>
+                                            </div>
+
+                                            <!-- Barras + Donut -->
+                                            <div class="dash-chart-box dash-bar-chart">
+                                                <div class="chart-box-header">
+                                                    <span>Por Categoría</span>
+                                                </div>
+                                                <svg viewBox="0 0 90 70" class="bar-chart-svg">
+                                                    <defs>
+                                                        <linearGradient id="bgrad1" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="0%" stop-color="#7c3aed"/>
+                                                            <stop offset="100%" stop-color="#4c1d95"/>
+                                                        </linearGradient>
+                                                        <linearGradient id="bgrad2" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="0%" stop-color="#2563eb"/>
+                                                            <stop offset="100%" stop-color="#1e3a8a"/>
+                                                        </linearGradient>
+                                                        <linearGradient id="bgrad3" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="0%" stop-color="#db2777"/>
+                                                            <stop offset="100%" stop-color="#9d174d"/>
+                                                        </linearGradient>
+                                                        <linearGradient id="bgrad4" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="0%" stop-color="#10b981"/>
+                                                            <stop offset="100%" stop-color="#065f46"/>
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <!-- Barras -->
+                                                    <rect x="5"  y="20" width="12" height="42" rx="3" fill="url(#bgrad1)"/>
+                                                    <rect x="24" y="30" width="12" height="32" rx="3" fill="url(#bgrad2)"/>
+                                                    <rect x="43" y="15" width="12" height="47" rx="3" fill="url(#bgrad3)"/>
+                                                    <rect x="62" y="35" width="12" height="27" rx="3" fill="url(#bgrad4)"/>
+                                                    <!-- Valores sobre barras -->
+                                                    <text x="11"  y="17" fill="#a78bfa" font-size="4.5" text-anchor="middle">42%</text>
+                                                    <text x="30"  y="27" fill="#60a5fa" font-size="4.5" text-anchor="middle">30%</text>
+                                                    <text x="49"  y="12" fill="#f472b6" font-size="4.5" text-anchor="middle">47%</text>
+                                                    <text x="68"  y="32" fill="#34d399" font-size="4.5" text-anchor="middle">27%</text>
+                                                    <!-- Etiquetas -->
+                                                    <text x="11"  y="68" fill="#475569" font-size="4" text-anchor="middle">Web</text>
+                                                    <text x="30"  y="68" fill="#475569" font-size="4" text-anchor="middle">ERP</text>
+                                                    <text x="49"  y="68" fill="#475569" font-size="4" text-anchor="middle">Mkt</text>
+                                                    <text x="68"  y="68" fill="#475569" font-size="4" text-anchor="middle">CRM</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tabla de pedidos recientes -->
+                                        <div class="dash-table-box">
+                                            <div class="chart-box-header">
+                                                <span>Pedidos Recientes</span>
+                                                <span class="chart-badge live"><span class="pulse-dot-sm"></span>En vivo</span>
+                                            </div>
+                                            <div class="dash-table-rows">
+                                                <div class="dash-trow">
+                                                    <span class="trow-id">#4821</span>
+                                                    <span class="trow-name">Carlos Mendoza</span>
+                                                    <span class="trow-amt">S/. 320</span>
+                                                    <span class="trow-status ok">Pagado</span>
+                                                </div>
+                                                <div class="dash-trow">
+                                                    <span class="trow-id">#4820</span>
+                                                    <span class="trow-name">Lucía Torres</span>
+                                                    <span class="trow-amt">S/. 870</span>
+                                                    <span class="trow-status pending">Pendiente</span>
+                                                </div>
+                                                <div class="dash-trow">
+                                                    <span class="trow-id">#4819</span>
+                                                    <span class="trow-name">Andrés Quispe</span>
+                                                    <span class="trow-amt">S/. 1,240</span>
+                                                    <span class="trow-status ok">Pagado</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- /.dash-main -->
+                                </div><!-- /.dash-body -->
+
+                            </div><!-- /.screen-content -->
+                        </div><!-- /.laptop-screen -->
+                        <div class="laptop-keyboard"><div class="keyboard-notch"></div></div>
+                    </div><!-- /.laptop-mockup -->
+                </div><!-- /.laptop-mockup-wrap -->
+
+                <!-- ── Tarjeta flotante: Ventas en tiempo real (arriba-derecha) ── -->
+                <div class="hero-float-card hero-float-top">
+                    <div class="hfc-header">
+                        <div class="live-pulse"></div>
+                        <span>Ventas en vivo</span>
+                    </div>
+                    <div class="hfc-val">S/. 8,342</div>
+                    <svg viewBox="0 0 80 28" class="hfc-sparkline">
+                        <defs>
+                            <linearGradient id="sg1" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M0,24 L12,18 L24,20 L36,10 L48,12 L60,4 L72,6 L80,2 L80,28 L0,28 Z" fill="url(#sg1)"/>
+                        <path d="M0,24 L12,18 L24,20 L36,10 L48,12 L60,4 L72,6 L80,2" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <span class="hfc-badge-up">▲ 23% vs ayer</span>
+                </div>
+
+                <!-- ── Tarjeta flotante: Móvil con donut (abajo-derecha) ── -->
+                <div class="mobile-mockup-wrap">
+                    <div class="mobile-mockup">
+                        <div class="mobile-screen">
+                            <div class="mobile-header">
+                                <div class="mobile-speaker"></div>
+                                <div class="mobile-camera"></div>
+                                <span class="mobile-category-badge">ANALÍTICA</span>
+                            </div>
+                            <div class="mobile-body" style="background: linear-gradient(180deg, #070512 0%, #0f0b2d 100%);">
+                                <div class="mob-system-header">
+                                    <div class="dash-avatar-m" style="width:24px;height:24px;font-size:9px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:#fff;">
+                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                                    </div>
+                                    <div><h4>WebSis Analytics</h4><p>Resumen semanal</p></div>
+                                </div>
+
+                                <!-- Donut chart SVG -->
+                                <div class="mob-donut-wrap">
+                                    <svg viewBox="0 0 80 80" class="mob-donut-svg">
+                                        <defs>
+                                            <linearGradient id="dg1" x1="0" y1="0" x2="1" y2="1">
+                                                <stop offset="0%" stop-color="#7c3aed"/>
+                                                <stop offset="100%" stop-color="#db2777"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <!-- Pista -->
+                                        <circle cx="40" cy="40" r="28" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="10"/>
+                                        <!-- Arco 1: principal (65%) -->
+                                        <circle cx="40" cy="40" r="28" fill="none" stroke="url(#dg1)" stroke-width="10"
+                                            stroke-dasharray="113 176" stroke-dashoffset="44" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+                                        <!-- Arco 2 (20%) -->
+                                        <circle cx="40" cy="40" r="28" fill="none" stroke="#2563eb" stroke-width="10"
+                                            stroke-dasharray="35 176" stroke-dashoffset="-69" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+                                        <!-- Arco 3 (15%) -->
+                                        <circle cx="40" cy="40" r="28" fill="none" stroke="#10b981" stroke-width="10"
+                                            stroke-dasharray="26 176" stroke-dashoffset="-104" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+                                        <!-- Centro -->
+                                        <text x="40" y="37" fill="white" font-size="10" font-weight="800" text-anchor="middle" font-family="Outfit,sans-serif">65%</text>
+                                        <text x="40" y="47" fill="#94a3b8" font-size="5" text-anchor="middle">Conversión</text>
+                                    </svg>
+                                    <div class="mob-donut-legend">
+                                        <div class="mob-legend-item"><span class="leg-dot" style="background:linear-gradient(135deg,#7c3aed,#db2777)"></span><span>Webs</span></div>
+                                        <div class="mob-legend-item"><span class="leg-dot" style="background:#2563eb"></span><span>ERP</span></div>
+                                        <div class="mob-legend-item"><span class="leg-dot" style="background:#10b981"></span><span>CRM</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="mob-system-stats">
+                                    <div class="mob-stat-card">
+                                        <span class="lbl">Usuarios activos</span>
+                                        <span class="val">1,284</span>
+                                        <span class="trend up">+18%</span>
+                                    </div>
+                                </div>
+
+                                <div class="mob-system-footer">
+                                    <span class="active-badge"><span class="pulse-dot"></span> Online</span>
+                                    <span class="mob-btn-action">Ver más</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── Tarjeta flotante: Hombre profesional (abajo-izquierda) ── -->
+                <div class="hero-float-person">
+                    <div class="hero-person-img" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80')"></div>
+                    <div class="hero-person-info">
+                        <span class="hero-person-name">Director de Proyectos</span>
+                        <span class="hero-person-status"><span class="pulse-dot" style="width:5px;height:5px;"></span> Disponible ahora</span>
+                    </div>
+                </div>
+
+            </div><!-- /.hero-visual -->
+        </div>
+    </section>
+
+    <!-- Contrast Divider Banner -->
+    <section class="features-banner-section">
+        <div class="container">
+            <div class="features-grid">
+                <!-- Tarjeta Rápida -->
+                <div class="feature-card" id="feat-rapida">
+                    <div class="feature-icon bg-purple-glow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="feature-info">
+                        <h3>RÁPIDA</h3>
+                        <p>Optimización técnica W3C y carga veloz que retiene clientes.</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta Responsive -->
+                <div class="feature-card" id="feat-responsive">
+                    <div class="feature-icon bg-blue-glow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="feature-info">
+                        <h3>RESPONSIVE</h3>
+                        <p>Adaptado al 100% en pantallas móviles, tablets y notebooks.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Segura -->
+                <div class="feature-card" id="feat-segura">
+                    <div class="feature-icon bg-green-glow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-info">
+                        <h3>SEGURA</h3>
+                        <p>Certificados SSL gratis, protección anti-hacks y respaldos periódicos.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Demo Gratis -->
+                <div class="feature-demo-card" id="feat-demo">
+                    <div class="demo-card-inner">
+                        <div class="demo-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                                <rect x="2" y="7" width="20" height="5"></rect>
+                                <line x1="12" y1="22" x2="12" y2="7"></line>
+                                <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                                <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                            </svg>
+                        </div>
+                        <div class="demo-info">
+                            <p class="demo-tagline">Te muestro una</p>
+                            <h3 class="demo-highlight">DEMO GRATIS</h3>
+                            <p class="demo-subtext">antes de que pagues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WhatsApp Row directly matching the layout in image -->
+            <div class="whatsapp-cta-bar">
+                <div class="whatsapp-info">
+                    <div class="whatsapp-bubble-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.429 2.525 1.218 3.521L6.64 20.013l4.739-1.243c.96.526 2.052.804 3.178.805h.003c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.585-5.766-5.767-5.766l-.03-.001zm0 1.05c2.6 0 4.714 2.115 4.715 4.716.001 2.6-2.113 4.714-4.714 4.715h-.002c-.997-.001-1.97-.323-2.778-.918l-.299-.221-2.909.763.777-2.836-.24-.38a4.673 4.673 0 0 1-.667-2.408c0-2.6 2.115-4.715 4.717-4.715l.001-.016zm3.029 5.86c-.165-.083-.979-.483-1.13-.538-.152-.055-.262-.083-.373.083-.11.165-.427.538-.524.649-.097.11-.193.124-.358.041a4.512 4.512 0 0 1-1.332-.821c-.517-.461-.866-1.03-.967-1.2-.1-.166-.011-.255.072-.338.075-.075.166-.194.249-.29.083-.097.11-.166.166-.276.055-.11.028-.207-.014-.29-.041-.083-.373-.9-.511-1.233-.134-.325-.27-.28-.372-.286-.096-.005-.207-.006-.317-.006a.61.61 0 0 0-.442.207c-.152.166-.58.566-.58 1.381s.593 1.602.677 1.713c.083.11 1.167 1.782 2.828 2.499.395.17.703.272.943.349.397.126.76.108 1.047.065.32-.048.979-.4 1.117-.787.138-.386.138-.718.097-.787-.041-.069-.152-.11-.317-.193z"/>
+                        </svg>
+                    </div>
+                    <div class="whatsapp-text">
+                        <h3>Hablemos por WhatsApp</h3>
+                        <p>y conversemos sin compromiso sobre tu proyecto.</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/51900000000?text=Hola%20WebSis%20Digital%20Ai,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20conversar%20sin%20compromiso." target="_blank" class="btn-whatsapp-cta" id="btn-whatsapp-chat">
+                    Escríbeme ahora
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="servicios">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">NUESTROS SERVICIOS</span>
+                <h2 class="section-title">Soluciones digitales que impulsan tu marca</h2>
+                <p class="section-desc">Nos especializamos en construir tu ecosistema digital completo, desde el código hasta las campañas publicitarias.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Servicio 1: Sitios Web -->
+                <div class="service-card" data-service="webs">
+                    <div class="service-glow-effect"></div>
+                    <div class="service-header-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-web)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Creación de Sitios Web</h3>
+                    <p>Diseñamos y desarrollamos sitios web únicos, rápidos, optimizados para SEO en Google y preparados para convertir visitas en clientes reales.</p>
+                    <ul class="service-features-list">
+                        <li>Landing Pages de Alta Conversión</li>
+                        <li>Sitios Web Corporativos Profesionales</li>
+                        <li>Tiendas Online con Pasarela de Pagos</li>
+                        <li>Blogs e interfaces personalizadas</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 2: Sistemas para Empresas -->
+                <div class="service-card" data-service="sistemas">
+                    <div class="service-glow-effect"></div>
+                    <div class="service-header-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-system)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                        </svg>
+                    </div>
+                    <h3>Sistemas para Empresas</h3>
+                    <p>Automatiza y optimiza los procesos de tu negocio con software web a medida. Controla tus ventas, inventarios, y clientes desde cualquier lugar.</p>
+                    <ul class="service-features-list">
+                        <li>Sistemas CRM y ERPs personalizados</li>
+                        <li>Paneles de Administración e Inventario</li>
+                        <li>Integraciones API y Bases de Datos</li>
+                        <li>Facturación Electrónica en tiempo real</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 3: Marketing Digital -->
+                <div class="service-card" data-service="marketing">
+                    <div class="service-glow-effect"></div>
+                    <div class="service-header-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-marketing)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Marketing Digital</h3>
+                    <p>Atrae prospectos calificados con estrategias de anuncios y SEO diseñadas a la medida de tu público objetivo, maximizando el retorno de inversión.</p>
+                    <ul class="service-features-list">
+                        <li>Campañas en Meta Ads (FB & IG)</li>
+                        <li>Anuncios en Google Ads (Buscadores & YouTube)</li>
+                        <li>Estrategias de Embudo de Ventas (Funnel)</li>
+                        <li>Posicionamiento SEO en Google</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 4: Creación de Flyers y Más -->
+                <div class="service-card" data-service="diseño">
+                    <div class="service-glow-effect"></div>
+                    <div class="service-header-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-design)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                            <path d="M12 6V12L16 14"></path>
+                        </svg>
+                    </div>
+                    <h3>Creación de Flyers & Identidad</h3>
+                    <p>Cautiva a tu audiencia desde el primer segundo. Diseñamos banners, flyers promocionales y piezas gráficas listas para destacar en tus redes sociales.</p>
+                    <ul class="service-features-list">
+                        <li>Flyers Promocionales e Informativos</li>
+                        <li>Identidad Visual de Marca y Logotipos</li>
+                        <li>Banners Publicitarios y Branding Digital</li>
+                        <li>Diseño de Plantillas para Social Media</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section (Process) -->
+    <section class="methodology-section" id="metodologia">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag glow">METODOLOGÍA</span>
+                <h2 class="section-title">¿Cómo trabajamos?</h2>
+                <p class="section-desc">Diseñamos un flujo ordenado y transparente para garantizar la calidad y el cumplimiento estricto de los plazos de entrega.</p>
+            </div>
+            
+            <div class="process-grid">
+                <!-- Paso 1 -->
+                <div class="process-card">
+                    <div class="process-step-num">01</div>
+                    <h3>Planificación & UX</h3>
+                    <p>Reunión inicial para definir objetivos, analizar tu mercado y diseñar la experiencia del usuario (UX).</p>
+                </div>
+                <!-- Paso 2 -->
+                <div class="process-card">
+                    <div class="process-step-num">02</div>
+                    <h3>Diseño de Prototipo</h3>
+                    <p>Creamos los planos visuales (UI) y te mostramos una **DEMO GRATIS** para alinear el diseño antes del código.</p>
+                </div>
+                <!-- Paso 3 -->
+                <div class="process-card">
+                    <div class="process-step-num">03</div>
+                    <h3>Código & Desarrollo</h3>
+                    <p>Programamos tu plataforma utilizando estándares modernos, código limpio, escalable y optimizado para Google.</p>
+                </div>
+                <!-- Paso 4 -->
+                <div class="process-card">
+                    <div class="process-step-num">04</div>
+                    <h3>Despliegue & Soporte</h3>
+                    <p>Subimos tu plataforma a servidores estables y te capacitamos para que la administres con soporte técnico continuo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Budget Calculator -->
+    <section class="calculator-section" id="presupuesto">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <div class="calculator-info">
+                    <span class="section-tag glow">COTIZADOR VIRTUAL</span>
+                    <h2>Calcula el presupuesto de tu proyecto en 30 segundos</h2>
+                    <p>Selecciona los servicios que necesitas y obtén un costo estimado de forma inmediata. Si te convence, envíanos el presupuesto por WhatsApp para agendar una reunión.</p>
+                    
+                    <div class="calc-live-preview">
+                        <p>Tu proyecto estimado:</p>
+                        <div class="price-display">
+                            <span class="currency">S/.</span>
+                            <span class="price-amount" id="calc-total-price">0</span>
+                        </div>
+                        <div class="project-summary-box" id="calc-summary-list">
+                            Ningún servicio seleccionado
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-form-container">
+                    <form id="calc-form">
+                        <!-- Step 1: Principal Service -->
+                        <div class="calc-group">
+                            <label class="calc-label">1. Servicio Principal</label>
+                            <div class="calc-radio-grid">
+                                <label class="calc-radio-card active">
+                                    <input type="radio" name="main-service" value="landing" checked data-price="450">
+                                    <div class="radio-card-content">
+                                        <span class="title">Landing Page</span>
+                                        <span class="price">Desde S/. 450</span>
+                                    </div>
+                                </label>
+                                <label class="calc-radio-card">
+                                    <input type="radio" name="main-service" value="web-corp" data-price="950">
+                                    <div class="radio-card-content">
+                                        <span class="title">Web Corporativa</span>
+                                        <span class="price">Desde S/. 950</span>
+                                    </div>
+                                </label>
+                                <label class="calc-radio-card">
+                                    <input type="radio" name="main-service" value="ecommerce" data-price="1400">
+                                    <div class="radio-card-content">
+                                        <span class="title">E-commerce</span>
+                                        <span class="price">Desde S/. 1400</span>
+                                    </div>
+                                </label>
+                                <label class="calc-radio-card">
+                                    <input type="radio" name="main-service" value="sistema" data-price="2500">
+                                    <div class="radio-card-content">
+                                        <span class="title">Sistema a Medida</span>
+                                        <span class="price">Desde S/. 2500</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Extras / Add-ons -->
+                        <div class="calc-group">
+                            <label class="calc-label">2. Añade Adicionales (Opcional)</label>
+                            <div class="calc-checkbox-grid">
+                                <label class="calc-checkbox-card">
+                                    <input type="checkbox" name="addons" value="seo" data-price="250">
+                                    <div class="checkbox-card-content">
+                                        <span class="title">SEO Posicionamiento</span>
+                                        <span class="price">+ S/. 250</span>
+                                    </div>
+                                </label>
+                                <label class="calc-checkbox-card">
+                                    <input type="checkbox" name="addons" value="flyer" data-price="150">
+                                    <div class="checkbox-card-content">
+                                        <span class="title">Pack de 4 Flyers</span>
+                                        <span class="price">+ S/. 150</span>
+                                    </div>
+                                </label>
+                                <label class="calc-checkbox-card">
+                                    <input type="checkbox" name="addons" value="marketing" data-price="400">
+                                    <div class="checkbox-card-content">
+                                        <span class="title">Campaña de Anuncios</span>
+                                        <span class="price">+ S/. 400</span>
+                                    </div>
+                                </label>
+                                <label class="calc-checkbox-card">
+                                    <input type="checkbox" name="addons" value="support" data-price="100">
+                                    <div class="checkbox-card-content">
+                                        <span class="title">Soporte Premium</span>
+                                        <span class="price">+ S/. 100/mes</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Priority -->
+                        <div class="calc-group">
+                            <label class="calc-label">3. Prioridad de Entrega</label>
+                            <select name="priority" id="calc-priority" class="calc-select">
+                                <option value="standard" data-multiplier="1">Estándar (15-30 días)</option>
+                                <option value="express" data-multiplier="1.25">Urgente (+25% de velocidad) (7-12 días)</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn-primary calc-submit-btn" id="btn-calc-send">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.429 2.525 1.218 3.521L6.64 20.013l4.739-1.243c.96.526 2.052.804 3.178.805h.003c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.585-5.766-5.767-5.766l-.03-.001zm0 1.05c2.6 0 4.714 2.115 4.715 4.716.001 2.6-2.113 4.714-4.714 4.715h-.002c-.997-.001-1.97-.323-2.778-.918l-.299-.221-2.909.763.777-2.836-.24-.38a4.673 4.673 0 0 1-.667-2.408c0-2.6 2.115-4.715 4.717-4.715l.001-.016zm3.029 5.86c-.165-.083-.979-.483-1.13-.538-.152-.055-.262-.083-.373.083-.11.165-.427.538-.524.649-.097.11-.193.124-.358.041a4.512 4.512 0 0 1-1.332-.821c-.517-.461-.866-1.03-.967-1.2-.1-.166-.011-.255.072-.338.075-.075.166-.194.249-.29.083-.097.11-.166.166-.276.055-.11.028-.207-.014-.29-.041-.083-.373-.9-.511-1.233-.134-.325-.27-.28-.372-.286-.096-.005-.207-.006-.317-.006a.61.61 0 0 0-.442.207c-.152.166-.58.566-.58 1.381s.593 1.602.677 1.713c.083.11 1.167 1.782 2.828 2.499.395.17.703.272.943.349.397.126.76.108 1.047.065.32-.048.979-.4 1.117-.787.138-.386.138-.718.097-.787-.041-.069-.152-.11-.317-.193z"/>
+                            </svg>
+                            Enviar cotización por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="proyectos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">NUESTRO PORTAFOLIO</span>
+                <h2 class="section-title">Trabajos que hablan por nosotros</h2>
+                <p class="section-desc">Explora algunos de nuestros proyectos destacados desarrollados a medida.</p>
+                <div class="demo-notice-bar">
+                    <span class="demo-notice-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    </span>
+                    <span>Estos son <strong>proyectos reales</strong> — cada uno cuenta con una versión demo interactiva que puedes explorar ahora mismo.</span>
+                </div>
+                
+                <!-- Filters -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="webs">Páginas Web</button>
+                    <button class="filter-btn" data-filter="sistemas">Sistemas</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing & Flyers</button>
+                </div>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Proyecto 1 -->
+                <div class="portfolio-item webs">
+                    <div class="portfolio-image-wrapper">
+                        <div class="portfolio-img-real" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80');">
+                            <span class="project-badge">Página Web</span>
+                            <div class="portfolio-overlay">
+                                <span class="view-details-btn" data-project="auradent">Ver Detalles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Aura Dent - Clínica Dental</h3>
+                        <p>Landing page odontológica de alta conversión, optimizada para campañas de captación de leads en Facebook Ads.</p>
+                        <div class="portfolio-actions">
+                            <a href="https://wa.me/51900000000?text=Hola%20WebSis,%20vi%20el%20proyecto%20de%20Aura%20Dent%20y%20me%20gustar%C3%ADa%20algo%20similar." target="_blank" class="project-link">Me interesa este estilo &rarr;</a>
+                            <a href="https://auradent-demo.websisdigital.ai" target="_blank" class="btn-demo">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Probar Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="portfolio-item sistemas">
+                    <div class="portfolio-image-wrapper">
+                        <div class="portfolio-img-real" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80');">
+                            <span class="project-badge">Sistema Web</span>
+                            <div class="portfolio-overlay">
+                                <span class="view-details-btn" data-project="farmacontrol">Ver Detalles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>FarmaControl - Gestión de Farmacia</h3>
+                        <p>Sistema ERP para farmacias que automatiza las ventas, alerta de stocks mínimos y gestiona proveedores en tiempo real.</p>
+                        <div class="portfolio-actions">
+                            <a href="https://wa.me/51900000000?text=Hola%20WebSis,%20vi%20el%20proyecto%20de%20FarmaControl%20y%20me%20gustar%C3%ADa%20un%20sistema%20similar." target="_blank" class="project-link">Me interesa este sistema &rarr;</a>
+                            <a href="https://farmacontrol-demo.websisdigital.ai" target="_blank" class="btn-demo">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Probar Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="portfolio-item webs">
+                    <div class="portfolio-image-wrapper">
+                        <div class="portfolio-img-real" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80');">
+                            <span class="project-badge">E-Commerce</span>
+                            <div class="portfolio-overlay">
+                                <span class="view-details-btn" data-project="urbanstyle">Ver Detalles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>UrbanStyle - Tienda de Moda</h3>
+                        <p>E-commerce completo con carrito de compras, pasarela de pago (Culqi/Niubiz) e integración para control de envíos.</p>
+                        <div class="portfolio-actions">
+                            <a href="https://wa.me/51900000000?text=Hola%20WebSis,%20vi%20el%20proyecto%20de%20UrbanStyle%20y%20me%20gustar%C3%ADa%20una%20tienda%20similar." target="_blank" class="project-link">Me interesa este estilo &rarr;</a>
+                            <a href="https://urbanstyle-demo.websisdigital.ai" target="_blank" class="btn-demo">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Probar Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="portfolio-item marketing">
+                    <div class="portfolio-image-wrapper">
+                        <div class="portfolio-img-real" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80');">
+                            <span class="project-badge">Flyer / Marketing</span>
+                            <div class="portfolio-overlay">
+                                <span class="view-details-btn" data-project="burger">Ver Detalles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Campaña Burguer & Co - Flyers</h3>
+                        <p>Estrategia publicitaria integral: Creación de contenido visual de alto impacto (flyers, banners) y pauta publicitaria en Meta Ads.</p>
+                        <div class="portfolio-actions">
+                            <a href="https://wa.me/51900000000?text=Hola%20WebSis,%20vi%20el%20dise%C3%B1o%20de%20Burguer%20%26%20Co%20y%20me%20gustar%C3%ADa%20marketing%20para%20mi%20marca." target="_blank" class="project-link">Me interesa este servicio &rarr;</a>
+                            <a href="https://burguerco-demo.websisdigital.ai" target="_blank" class="btn-demo">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Probar Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Sleek Quotes) -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag glow">TESTIMONIOS</span>
+                <h2 class="section-title">Clientes que confían en nosotros</h2>
+                <p class="section-desc">La satisfacción de nuestros clientes corporativos es nuestro mayor aval técnico.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"El sistema FarmaControl automatizó nuestras 3 sucursales. El stock se actualiza al instante y la facturación SUNAT se realiza en segundos. Excelente soporte post-venta."</p>
+                    <div class="client-info">
+                        <strong>Dr. Alejandro Ruiz</strong>
+                        <span>Director en FarmaExpress</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Buscábamos un diseño que transmitiera exclusividad y velocidad. WebSis Digital Ai superó nuestras expectativas. Nuestras ventas online aumentaron un 40% en dos meses."</p>
+                    <div class="client-info">
+                        <strong>Valeria Domínguez</strong>
+                        <span>Fundadora de UrbanStyle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Accordion UI) -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">PREGUNTAS FRECUENTES</span>
+                <h2 class="section-title">Resolveremos tus dudas</h2>
+                <p class="section-desc">Respuestas rápidas a las consultas más habituales sobre nuestro flujo de desarrollo.</p>
+            </div>
+            
+            <div class="faq-accordion-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿En qué consiste la DEMO GRATIS antes de pagar?</span>
+                        <svg class="chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>Diseñamos un prototipo visual interactivo de tu sitio web basándonos en tu marca. Te lo mostramos en vivo para que evalúes la propuesta estética y funcional, sin ningún compromiso de pago inicial.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿Los sitios web incluyen dominio y hosting?</span>
+                        <svg class="chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>Sí, todos nuestros planes de diseño y desarrollo web incluyen hosting de alta velocidad optimizado, certificado de seguridad SSL instalado y la gestión de tu dominio propio (.com o .pe) por el primer año.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿El sistema a medida se puede integrar con facturación SUNAT?</span>
+                        <svg class="chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>Totalmente. Desarrollamos integraciones completas con la OSE/SUNAT para emitir boletas, facturas, notas de crédito y guías de remisión de manera automatizada y conforme a las normativas vigentes.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿Tengo control completo para editar los contenidos de mi página?</span>
+                        <svg class="chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>Sí, desarrollamos con paneles autoadministrables sencillos para que puedas actualizar textos, subir nuevos productos, editar fotos y cambiar precios sin depender de conocimientos técnicos o líneas de código.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Preview Modal -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-image-col" id="modal-project-img"></div>
+                <div class="modal-info-col">
+                    <span class="modal-tag" id="modal-project-tag">SITIO WEB</span>
+                    <h3 id="modal-project-title">Título del Proyecto</h3>
+                    <p class="modal-desc" id="modal-project-desc">Descripción larga del proyecto.</p>
+                    
+                    <div class="modal-specs">
+                        <h4>Características Incluidas:</h4>
+                        <ul id="modal-project-specs">
+                            <li>Característica 1</li>
+                            <li>Característica 2</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#" target="_blank" class="btn-primary modal-cta-btn" id="modal-project-whatsapp">
+                        Consultar por este proyecto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Form Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-text-box">
+                    <span class="section-tag">CONTACTO DIRECTO</span>
+                    <h2>¿Listo para digitalizar tu negocio?</h2>
+                    <p>Cuéntanos tu proyecto rellenando el formulario o contactándonos directamente a través de nuestros canales. Estamos ansiosos por trabajar contigo.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div>
+                                <span>Escríbenos por Correo</span>
+                                <strong>contacto@websisdigital.ai</strong>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <span>Llámanos</span>
+                                <strong>+51 900 000 000</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Nombre completo</label>
+                            <input type="text" id="form-name" placeholder="Escribe tu nombre" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="form-phone" placeholder="Ej. +51 987 654 321" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-project">Tipo de Proyecto</label>
+                            <select id="form-project" class="form-input">
+                                <option value="sitio-web">Página Web / Landing Page</option>
+                                <option value="sistema-empresarial">Sistema para Empresa</option>
+                                <option value="marketing-digital">Marketing Digital</option>
+                                <option value="flyers-diseno">Creación de Flyers / Diseño</option>
+                                <option value="otro">Otro Proyecto</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-msg">Cuéntanos sobre tu idea</label>
+                            <textarea id="form-msg" rows="4" placeholder="Ej: Necesito una tienda web de ropa..." required class="form-input"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit-btn" id="btn-submit-form">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Features Badges -->
+    <section class="badges-row-section">
+        <div class="container">
+            <div class="badges-row">
+                <div class="badge-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <span>Sitios 100% seguros</span>
+                </div>
+                <div class="badge-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span>Código limpio y escalable</span>
+                </div>
+                <div class="badge-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Entrega rápida y puntual</span>
+                </div>
+                <div class="badge-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                    </svg>
+                    <span>Soporte incluido siempre</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="footer-logo-text">WebSis <span class="accent">Digital Ai</span></span>
+                </div>
+                <p>Expertos en crear soluciones digitales integrales para impulsar, optimizar y posicionar empresas en el mercado moderno.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#metodologia">Metodología</a></li>
+                    <li><a href="#presupuesto">Cotizador</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="LinkedIn">LI</a>
+                    <a href="#" aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 WebSis Digital Ai. Todos los derechos reservados. Diseñado y Desarrollado con ❤️.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS script -->
+    <script src="script.js"></script>
+</body>
+</html>
